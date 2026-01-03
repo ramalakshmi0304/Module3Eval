@@ -10,12 +10,12 @@ export const ResProvider = ({ children }) => {
     }
 
     const updateDetails = (id, UpdatedDetails) => {
-        setRestaurant((prev)=> prev.map((p) => ((p) = p.id == id ? ...p, updatedDetails : p)))
+        setRestaurant((prev)=> prev.map((p) => ((p) = p.id == id ? ...prev, updatedDetails : prev)))
 
     }
 
     const deleteCard = (id) => {
-        setRestaurant((prev)=>prev.filter=(p.id !== id), p)
+        setRestaurant((prev)=>prev.filter=(p.id !== id))
 
 
     }

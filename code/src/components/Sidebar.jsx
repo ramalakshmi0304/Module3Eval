@@ -1,4 +1,6 @@
 import React from 'react'
+import { useContext } from 'react'
+import ResContext from '../context/ResContext'
 
 const Sidebar = ({ addRestaurant }) => {
 
@@ -9,10 +11,13 @@ const Sidebar = ({ addRestaurant }) => {
     const [type, setType] = useState("")
     const [parkingLot, setParkingLot] = useState("")
 
-    const handleAdd = {
+    const handleAdd =(e)=> {
         e.preventDefault(),
+
+    }
          
         addRestaurant({
+            id=Date.now(),
             restaurantName,
             address,
             type,
