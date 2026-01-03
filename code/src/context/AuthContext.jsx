@@ -15,8 +15,9 @@ export const AuthProvider = ({ children }) => {
     const login=()=>{
 
          if(email==="admin@gmail.com" && password=="admin1234"){
-            navigate(/admin/dashboard)
+           navigate('/admin/dashboard')
          } else if(email==="customer@gmail.com" && password=="customer1234"){
+            navigate('/customers/dashboard')
 
          }else{"alert incorrect email and password"
 
