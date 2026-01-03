@@ -1,14 +1,24 @@
 import React from 'react'
 
-const Sidebar = () => {
+const Sidebar = ({ addRestaurant }) => {
+
+    addRestaurant = useContext(ResContext)
 
     const [restaurantName, setRestaurantName] = useState("")
     const [address, setAddress] = useState("")
     const [type, setType] = useState("")
     const [parkingLot, setParkingLot] = useState("")
 
-    const handleAdd={
-        
+    const handleAdd = {
+        e.preventDefault(),
+         
+        addRestaurant({
+            restaurantName,
+            address,
+            type,
+            parkingLot,
+        })
+
     }
 
 
