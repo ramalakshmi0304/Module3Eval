@@ -3,26 +3,34 @@ import React from 'react'
 export const ResContext = createContext();
 export const ResProvider = ({ children }) => {
 
-    const [restaurant, setRestaurnt] = useContext([]);
+    const [restaurant, setRestaurant] = useContext([]);
 
-    const addRestaurant=()=>{
-        setRestaurant.prev((prev)=>(...prev,...restaurant),prev)
+    const addRestaurant = () => {
+        setRestaurant((prev) => (...prev, ...restaurant), prev)
     }
 
+    const updateDetails = (id, UpdatedDetails) => {
+        setRestaurant.map((prev) => ((p) = p.id == id ? ...p, updatedDetails : p))
+
+    }
+
+    const deleteCard = (id) => {
+        setRestaurant.filter((prev) => (prev.id !== id), prev)
 
 
+    }
 
-    return (
+    return
 
 
-        <div>
-            <ResContext.Provider value={{addRestaurant, updateDetails,deleteCard }}>
+    <div>
+        <ResContext.Provider value={{ addRestaurant, updateDetails, deleteCard }}>
 
-                {children}
+            {children}
 
-            </ResContext.Provider>
+        </ResContext.Provider>
 
-        </div>
+    </div>
     )
 }
 
